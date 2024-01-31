@@ -17,6 +17,7 @@ Prerequisites
 
 To run this project, you need to have the following installed:
 
+
 Docker
 Kubernetes
 Minikube (for local deployment)
