@@ -49,8 +49,7 @@ Clean Up
 
 To clean Kubernetes cluster, we can delete the deployments and services:
 kubectl delete -f webapp.yaml
-kubectl delete -f mongo.yaml<img width="1680" alt="Screenshot 2024-01-30 at 11 46 18 PM" src="https://github.com/Khushdeep899/Kubernetes-Demo/assets/34795705/084e8df7-dd44-4833-b591-0c3584a30207">
-
+kubectl delete -f mongo.yaml
 kubectl delete -f mongo-config.yaml
 kubectl delete -f mongo-secret.yaml
 
@@ -58,7 +57,8 @@ kubectl delete -f mongo-secret.yaml
 Additionally, you can stop Minikube:
 minikube stop
 
-![Uploading Screenshot 2024-01-30 at 11.46.18 PM.png…]()
+<img width="1680" alt="Screenshot 2024-01-30 at 11 46 18 PM" src="https://github.com/Khushdeep899/Kubernetes-Demo/assets/34795705/084e8df7-dd44-4833-b591-0c3584a30207">
+
 
 
 <img width="1680" alt="Screenshot 2024-01-30 at 11 50 15 PM" src="https://github.com/Khushdeep899/Kubernetes-Demo/assets/34795705/81165899-fe58-4f91-931c-dbacf1ab5152">
