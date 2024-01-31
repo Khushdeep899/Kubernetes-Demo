@@ -9,32 +9,48 @@ Project Structure
 
 The project includes the following Kubernetes manifest files:
 
+
 mongo-config.yaml: Configuration file for MongoDB to set up necessary configurations.
+
 mongo-secret.yaml: Secret file for MongoDB to securely store and manage sensitive information such as passwords.
+
 mongo.yaml: Deployment and service definitions for MongoDB.
+
 webapp.yaml: Deployment and service definitions for the web application that interacts with MongoDB.
+
+
 Prerequisites
 
 To run this project, you need to have the following installed:
 
 
 Docker
+
 Kubernetes
+
 Minikube (for local deployment)
+
 kubectl (Kubernetes CLI tool)
-Getting Started
+
+
+
+Getting Started:
+
 
 Follow these steps to get your Kubernetes cluster running with the web application and MongoDB:
 
 
 Start Minikube with Docker as the driver:
+
 minikube start --driver=docker
 
 Apply the configuration and secret files for MongoDB:
+
 kubectl apply -f mongo-config.yaml
 kubectl apply -f mongo-secret.yaml
 
 Deploy MongoDB and the web application:
+
 kubectl apply -f mongo.yaml
 kubectl apply -f webapp.yaml
 
@@ -42,6 +58,7 @@ Check the status of your deployments:
 kubectl get all
 
 Access the web application by forwarding the service port to your local machine:
+
 kubectl port-forward service/webapp-service 8080:80
 
 Now, the web application should be accessible via http://localhost:8080.
@@ -50,9 +67,13 @@ Now, the web application should be accessible via http://localhost:8080.
 Clean Up
 
 To clean Kubernetes cluster, we can delete the deployments and services:
+
 kubectl delete -f webapp.yaml
+
 kubectl delete -f mongo.yaml
+
 kubectl delete -f mongo-config.yaml
+
 kubectl delete -f mongo-secret.yaml
 
 
